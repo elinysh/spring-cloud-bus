@@ -1,8 +1,18 @@
 server:
   port: 8088
+
 spring:
+  profiles:
+    active: git
+  application:
+    name: "config-server"
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/elinysh/spring-cloud-bus
+          uri: https://github.com/elinysh/spring-cloud-config-repository
+          searchPaths: src/main/java/com/example/springcloudconfigrepository/sample/cofig-repo
+
+logging:
+  level:
+    root: debug
