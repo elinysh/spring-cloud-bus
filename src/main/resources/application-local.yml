@@ -1,0 +1,6 @@
+spring:
+  profiles: local
+
+logging:
+  level:
+    root: debug

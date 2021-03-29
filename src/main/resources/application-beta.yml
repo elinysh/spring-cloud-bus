@@ -1,0 +1,6 @@
+spring:
+  profiles: beta
+
+logging:
+  level:
+    root: debug
