@@ -1,0 +1,4 @@
+spring:
+  data:
+    mongodb:
+      uri: ${nclavis.healthcare-group.mongodb}

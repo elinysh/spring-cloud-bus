@@ -1,0 +1,426 @@
+{
+  "applicationId": "TEST",
+  "description": "설문지 설명222",
+  "factorMap": {
+    "score": {
+      "code": "score",
+      "name": "score",
+      "value": 0,
+      "type": "DOUBLE"
+    }
+  },
+  "questions": [
+    {
+      "answerType": "SINGULAR",
+      "answers": [
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "なし",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 10,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "NONE",
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "なし",
+          "order": 5,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "慢性腎臓症",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 10,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "ADDITION",
+                "value": 1,
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "慢性腎臓症",
+          "order": 4,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "狭心症",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 10,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "ADDITION",
+                "value": 1,
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "狭心症",
+          "order": 3,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "糖尿病",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 10,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "ADDITION",
+                "value": 1,
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "糖尿病",
+          "order": 2,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "高血圧",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 10,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "ADDITION",
+                "value": 1,
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "高血圧",
+          "order": 1,
+          "type": "TEXT"
+        }
+      ],
+      "description": "질문에 답해주세요",
+      "required": true,
+      "title": "1.あなたが診断されたことのある病気を教えてください。",
+      "type": "SELECTABLE"
+    },
+    {
+      "answerType": "SINGULAR",
+      "answers": [
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "運動不足",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 11,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "ADDITION",
+                "value": 2,
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "運動不足",
+          "order": 5,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS_",
+            "value": "喫煙",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 11,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "ADDITION",
+                "value": 2,
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "喫煙",
+          "order": 2,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "偏食",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 11,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "ADDITION",
+                "value": 1,
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "偏食",
+          "order": 3,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "飲酒が多い",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 11,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "ADDITION",
+                "value": 1,
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "飲酒が多い",
+          "order": 4,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS_OR_GREATER_THAN",
+            "value": 21,
+            "type": "DOUBLE"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 11,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "NONE",
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "あてはまるものはない",
+          "order": 5,
+          "type": "TEXT"
+        }
+      ],
+      "description": "질문에 답해주세요",
+      "required": true,
+      "title": "2.あなたの生活の中で当てはまることがあれば教えてください",
+      "type": "SELECTABLE"
+    },
+    {
+      "answerType": "SINGULAR",
+      "answers": [
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "あてはまるものはない\t",
+            "type": "TEXt"
+          },
+          "decision": {
+            "action": {
+              "type": "TERMINATION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "NONE",
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "あてはまるものはない\t",
+          "order": 5,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "体重増加",
+            "type": "TEXt"
+          },
+          "decision": {
+            "action": {
+              "type": "TERMINATION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "ADDITION",
+                "value": 1,
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "体重増加",
+          "order": 4,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "手足のむくみ",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "type": "TERMINATION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "ADDITION",
+                "value": 1,
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "手足のむくみ",
+          "order": 3,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "疲れやすい",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "type": "TERMINATION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "ADDITION",
+                "value": 2,
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "疲れやすい",
+          "order": 2,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "息切れがある",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "type": "TERMINATION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "ADDITION",
+                "value": 2,
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "息切れがある",
+          "order": 1,
+          "type": "TEXT"
+        }
+      ],
+      "description": "질문에 답해주세요",
+      "required": true,
+      "title": "3.あなたに当てはまる症状があれば教えてください",
+      "type": "SELECTABLE"
+    }
+  ],
+  "data": {
+    "intro": [
+      {
+        "messages": [ "こんにちは! LINEヘルスケアです", "あなたの●●●の症状について\n\nいくつか教えてください。222" ],
+        "buttons": [
+          {
+            "message": "症状をチェックする",
+            "buttonColor": "#1ed57a",
+            "textColor": "#ffffff"
+          }
+        ],
+        "images": [ ]
+      }
+    ]
+  },
+  "status": "PUBLISHED",
+  "title": "test question222",
+  "version": 1
+}

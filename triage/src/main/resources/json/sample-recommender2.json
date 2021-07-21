@@ -1,0 +1,37 @@
+{
+  "applicationId": "TEST_LOCAL",
+  "questionnaireConditionTable": {
+    "1": {
+      "DIABETES_TYPE": {
+        "targetType": "USER_PROFILE",
+        "conditionType": "EQUALS",
+        "type": "CODE",
+        "code": "DIABETES_TYPE",
+        "value": "TYPE1"
+      },
+      "DIABETES_TREATMENT": {
+        "targetType": "USER_PROFILE",
+        "type": "CODE",
+        "conditionType": "EQUALS",
+        "value": "DIABETES_TREATMENT",
+        "code": "SINGLE_PILL"
+      }
+    },
+    "2": {
+      "DIABETES_TYPE": {
+        "targetType": "USER_PROFILE",
+        "conditionType": "NOT_EQUALS",
+        "type": "CODE",
+        "code": "DIABETES_TYPE",
+        "value": "TYPE1"
+      },
+      "DIABETES_TREATMENT": {
+        "targetType": "USER_PROFILE",
+        "type": "CODE",
+        "conditionType": "NOT_EQUALS",
+        "value": "DIABETES_TREATMENT",
+        "code": "SINGLE_PILL"
+      }
+    }
+  }
+}

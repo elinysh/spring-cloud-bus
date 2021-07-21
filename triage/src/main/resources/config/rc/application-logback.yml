@@ -1,0 +1,16 @@
+logging:
+  common.pattern: "[%d{yyyy-MM-dd HH:mm:ss.SSS}]%clr([%-5p])[%15.15t]%clr([%F:%L]){cyan} %msg%n"
+  pattern:
+    file: ${logging.common.pattern}
+  level:
+    root: WARN
+    web: WARN
+    sql: WARN
+    com.linecorp.healthcare.disease: WARN
+    all: WARN
+  file:
+    path: "/home1/irteam/logs/survey"
+    name: ${logging.file.path}/survey.log
+  logback:
+    rollingpolicy:
+      max-history: 30

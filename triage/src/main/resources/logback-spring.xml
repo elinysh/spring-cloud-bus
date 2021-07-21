@@ -1,0 +1,57 @@
+<configuration>
+  <include resource="org/springframework/boot/logging/logback/defaults.xml" />
+  <include resource="org/springframework/boot/logging/logback/console-appender.xml" />
+
+  <springProperty name="PHASE" source="phase"/>
+  <springProperty name="LOGGING_LEVEL" source="logging.level.all"/>
+
+  <property name="PROJECT_NAME" value="healthcare-disease-survey-${PHASE}" />
+
+  <springProfile name="console-logging">
+    <root level="INFO">
+      <appender-ref ref="CONSOLE" />
+    </root>
+  </springProfile>
+
+  <!-- NELO Appender -->
+  <springProfile name="nelo-logging">
+    <appender name="NELO_LOGBACK" class="com.naver.nelo2.logback.ThriftAppender">
+      <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+        <level>INFO</level>
+      </filter>
+      <param name="projectName" value="${PROJECT_NAME}" />
+      <param name="collectorUrl" value="nelo2-col.linecorp.com" />
+      <param name="encoding" value="utf-8" />
+      <param name="timeout" value="2000" />
+      <param name="version" value="1.0.0" />
+      <param name="errorCodeType" value="default" />
+      <param name="port" value="10006" />
+      <param name="logType" value="default" />
+      <param name="isBulkEnabled" value="true" />
+      <param name="bulkSize" value="2000" />
+      <param name="enableAddPhaseToProjectName" value="true" />
+      <param name="bulkInterval" value="1000" />
+    </appender>
+
+    <appender name="ASYNC_NELO" class="ch.qos.logback.classic.AsyncAppender">
+      <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+        <level>INFO</level>
+      </filter>
+      <param name="neverBlock" value="true" />
+      <param name="includeCallerData" value="true" />
+      <param name="queueSize" value="2048" />
+      <appender-ref ref="NELO_LOGBACK" />
+    </appender>
+
+    <root level="${LOGGING_LEVEL}">
+      <appender-ref ref="ASYNC_NELO" />
+    </root>
+  </springProfile>
+
+  <springProfile name="file-logging">
+    <include resource="org/springframework/boot/logging/logback/file-appender.xml" />
+    <root level="${LOGGING_LEVEL}">
+      <appender-ref ref="FILE" />
+    </root>
+  </springProfile>
+</configuration>

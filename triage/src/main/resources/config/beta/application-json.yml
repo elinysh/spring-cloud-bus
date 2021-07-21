@@ -1,0 +1,12 @@
+spring:
+  jackson:
+    default-property-inclusion: non_null
+    deserialization:
+      FAIL_ON_UNKNOWN_PROPERTIES: false
+      READ_DATE_TIMESTAMPS_AS_NANOSECONDS: false
+    mapper:
+      DEFAULT_VIEW_INCLUSION: false
+    serialization:
+      WRITE_DURATIONS_AS_TIMESTAMPS: false
+
+

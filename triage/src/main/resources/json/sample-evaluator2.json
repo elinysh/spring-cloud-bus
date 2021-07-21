@@ -1,0 +1,72 @@
+{
+  "questionnaireId": 2,
+  "evaluationTables": [
+    {
+      "factorName": "score",
+      "classMap": {
+        "受診が必須": {
+          "targetType": "FACTOR",
+          "conditionType": "EQUALS",
+          "type": "DOUBLE",
+          "value": 5
+        },
+        "受診をおすすめ": {
+          "targetType": "FACTOR",
+          "conditionType": "EQUALS_OR_GREATER_THAN",
+          "type": "DOUBLE",
+          "value": 3,
+          "and": {
+            "targetType": "FACTOR",
+            "type": "DOUBLE",
+            "conditionType": "EQUALS_OR_LESS_THAN",
+            "value": 4
+          }
+        },
+        "生活習慣病予備軍": {
+          "targetType": "FACTOR",
+          "conditionType": "EQUALS_OR_GREATER_THAN",
+          "type": "DOUBLE",
+          "value": 1,
+          "and": {
+            "targetType": "FACTOR",
+            "type": "DOUBLE",
+            "conditionType": "EQUALS_OR_LESS_THAN",
+            "value": 2
+          }
+        },
+        "無症状": {
+          "targetType": "FACTOR",
+          "conditionType": "EQUALS",
+          "type": "DOUBLE",
+          "value": 0
+        }
+      }
+    }
+  ],
+  "resultMap": {
+    "受診が必須": {
+      "targetType": "FACTOR",
+      "conditionType": "EQUALS",
+      "value": "受診が必須",
+      "type": "TEXT"
+    },
+    "受診をおすすめ": {
+      "targetType": "FACTOR",
+      "conditionType": "EQUALS",
+      "value": "受診をおすすめ",
+      "type": "TEXT"
+    },
+    "生活習慣病予備軍": {
+      "targetType": "FACTOR",
+      "conditionType": "EQUALS",
+      "value": "無症状",
+      "type": "TEXT"
+    },
+    "無症状": {
+      "targetType": "FACTOR",
+      "conditionType": "EQUALS",
+      "value": "無症状",
+      "type": "TEXT"
+    }
+  }
+}

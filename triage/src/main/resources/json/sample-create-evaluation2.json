@@ -1,0 +1,19 @@
+{
+  "applicationId": "TEST",
+  "questionnaireId": 2,
+  "userId": 8,
+  "userAnswers": [
+    {
+      "answerId": 1,
+      "questionId": 9
+    },
+    {
+      "answerId": 4,
+      "questionId": 10
+    },
+    {
+      "answerId": 1,
+      "questionId": 11
+    }
+  ]
+}

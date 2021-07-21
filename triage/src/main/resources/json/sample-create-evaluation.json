@@ -1,0 +1,39 @@
+{
+  "applicationId": "TEST_LOCAL",
+  "questionnaireId": 1,
+  "userId": 8,
+  "userAnswers": [
+    {
+      "answerId": 1,
+      "questionId": 1
+    },
+    {
+      "answerId": 5,
+      "questionId": 2
+    },
+    {
+      "answerId": 1,
+      "questionId": 3
+    },
+    {
+      "answerId": 3,
+      "questionId": 4
+    },
+    {
+      "answerId": 1,
+      "questionId": 5
+    },
+    {
+      "answerId": 1,
+      "questionId": 6
+    },
+    {
+      "answerId": 2,
+      "questionId": 7
+    },
+    {
+      "answerId": 2,
+      "questionId": 8
+    }
+  ]
+}

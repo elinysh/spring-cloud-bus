@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    group:
+      "default": "console-logging"
+
+logging:
+  common.pattern: "[%d{yyyy-MM-dd HH:mm:ss.SSS}]%clr([%-5p])[%15.15t]%clr([%F:%L]){cyan} %msg%n"
+  pattern:
+    console: ${logging.common.pattern}
+  level:
+    root: INFO
+    web: INFO
+    sql: INFO
+    com.linecorp.healthcare.disease: INFO
+    all: INFO
+    org.springframework.data.mongodb.core.MongoTemplate: INFO

@@ -1,0 +1,848 @@
+{
+  "applicationId": "TEST_LOCAL",
+  "description": "설문지 설명",
+  "factorMap": {
+    "score": {
+      "code": "score",
+      "name": "score",
+      "value": 0,
+      "type": "DOUBLE"
+    }
+  },
+  "publishedAt": "2021-07-02T17:11:03.809Z",
+  "questions": [
+    {
+      "answerType": "SINGULAR",
+      "answers": [
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "NO",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 5,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "NONE",
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "一度もない ",
+          "order": 2,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "YES",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 5,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "ADDITION",
+                "value": 1,
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "ある",
+          "order": 1,
+          "type": "TEXT"
+        }
+      ],
+      "description": "질문에 답해주세요",
+      "required": true,
+      "title": "1.花粉症で病院を受診したことは？",
+      "type": "SELECTABLE"
+    },
+    {
+      "answerType": "SINGULAR",
+      "answers": [
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": 0,
+            "type": "DOUBLE"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 5,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "NONE",
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "0回 ",
+          "order": 5,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS_OR_GREATER_THAN",
+            "value": 1,
+            "type": "DOUBLE",
+            "and": {
+              "targetType": "ANSWER",
+              "conditionType": "EQUALS_OR_LESS_THAN",
+              "value": 5,
+              "type": "DOUBLE"
+            }
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 5,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "NONE",
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "5 ~ 1回",
+          "order": 4,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS_OR_GREATER_THAN",
+            "value": 6,
+            "type": "DOUBLE",
+            "and": {
+              "targetType": "ANSWER",
+              "conditionType": "EQUALS_OR_LESS_THAN",
+              "value": 10,
+              "type": "DOUBLE"
+            }
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 5,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "ADDITION",
+                "value": 1,
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "10 ~ 6回",
+          "order": 3,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS_OR_GREATER_THAN",
+            "value": 11,
+            "type": "DOUBLE",
+            "and": {
+              "targetType": "ANSWER",
+              "conditionType": "EQUALS_OR_LESS_THAN",
+              "value": 20,
+              "type": "DOUBLE"
+            }
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 5,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "ADDITION",
+                "value": 1,
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "20 ~ 11回",
+          "order": 2,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS_OR_GREATER_THAN",
+            "value": 21,
+            "type": "DOUBLE"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 5,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "ADDITION",
+                "value": 2,
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "21回以上",
+          "order": 1,
+          "type": "TEXT"
+        }
+      ],
+      "description": "질문에 답해주세요",
+      "required": true,
+      "title": "2.症状が一番ひどいときの1日あたりのくしゃみの回数は？",
+      "type": "SELECTABLE"
+    },
+    {
+      "answerType": "SINGULAR",
+      "answers": [
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": 0,
+            "type": "DOUBLE"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 5,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "NONE",
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "0回",
+          "order": 5,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS_OR_GREATER_THAN",
+            "value": 1,
+            "type": "DOUBLE",
+            "and": {
+              "targetType": "ANSWER",
+              "conditionType": "EQUALS_OR_LESS_THAN",
+              "value": 5,
+              "type": "DOUBLE"
+            }
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 5,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "NONE",
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "5 ~ 1回",
+          "order": 4,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS_OR_GREATER_THAN",
+            "value": 6,
+            "type": "DOUBLE",
+            "and": {
+              "targetType": "ANSWER",
+              "conditionType": "EQUALS_OR_LESS_THAN",
+              "value": 10,
+              "type": "DOUBLE"
+            }
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 5,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "ADDITION",
+                "value": 1,
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "10 ~ 6回",
+          "order": 3,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS_OR_GREATER_THAN",
+            "value": 11,
+            "type": "DOUBLE",
+            "and": {
+              "targetType": "ANSWER",
+              "conditionType": "EQUALS_OR_LESS_THAN",
+              "value": 20,
+              "type": "DOUBLE"
+            }
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 5,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "ADDITION",
+                "value": 1,
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "20 ~ 11回",
+          "order": 2,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS_OR_GREATER_THAN",
+            "value": 21,
+            "type": "DOUBLE"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 5,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "ADDITION",
+                "value": 2,
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "21回以上",
+          "order": 1,
+          "type": "TEXT"
+        }
+      ],
+      "description": "질문에 답해주세요",
+      "required": true,
+      "title": "3.病状が一番ひどいときの1日に鼻をかむ回数は？",
+      "type": "SELECTABLE"
+    },
+    {
+      "answerType": "SINGULAR",
+      "answers": [
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "鼻づまりはない",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 5,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "NONE",
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "鼻づまりはない",
+          "order": 5,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "鼻づまりはあるが口で呼吸することはない",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 5,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "NONE",
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "鼻づまりはあるが口で呼吸することはない",
+          "order": 4,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "鼻づまりが強く、ときどき口で呼吸",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 5,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "ADDITION",
+                "value": 1,
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "鼻づまりが強く、ときどき口で呼吸",
+          "order": 3,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "鼻づまりが強く、ほとんど口で呼吸",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 5,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "ADDITION",
+                "value": 1,
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "鼻づまりが強く、ほとんど口で呼吸",
+          "order": 2,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "1日中、完全につまる",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 5,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "ADDITION",
+                "value": 2,
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "1日中、完全につまる",
+          "order": 1,
+          "type": "TEXT"
+        }
+      ],
+      "description": "질문에 답해주세요",
+      "required": true,
+      "title": "4.症状が一番ひどいときの1日の鼻づまりの頻度は？",
+      "type": "SELECTABLE"
+    },
+    {
+      "answerType": "SINGULAR",
+      "answers": [
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "どちらともいえない ",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 5,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "NONE",
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "どちらともいえない ",
+          "order": 3,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "いいえ",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 5,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "NONE",
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "いいえ",
+          "order": 2,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "はい",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 5,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "ADDITION",
+                "value": 1,
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "はい",
+          "order": 1,
+          "type": "TEXT"
+        }
+      ],
+      "description": "질문에 답해주세요",
+      "required": true,
+      "title": "5.仕事や家事、勉強への集中力や意欲が低下している。",
+      "type": "SELECTABLE"
+    },
+    {
+      "answerType": "SINGULAR",
+      "answers": [
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "どちらともいえない ",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 5,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "NONE",
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "どちらともいえない ",
+          "order": 3,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "いいえ",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 5,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "NONE",
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "いいえ",
+          "order": 2,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "はい",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 5,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "ADDITION",
+                "value": 1,
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "はい",
+          "order": 1,
+          "type": "TEXT"
+        }
+      ],
+      "description": "질문에 답해주세요",
+      "required": true,
+      "title": "6.体がだるい、もしくは疲れやすいと感じる。",
+      "type": "SELECTABLE"
+    },
+    {
+      "answerType": "SINGULAR",
+      "answers": [
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "どちらともいえない ",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 5,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "NONE",
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "どちらともいえない ",
+          "order": 3,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "いいえ",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 5,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "NONE",
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "いいえ",
+          "order": 2,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "はい",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "nextQuestionId": 5,
+              "type": "TRANSITION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "ADDITION",
+                "value": 1,
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "はい",
+          "order": 1,
+          "type": "TEXT"
+        }
+      ],
+      "description": "질문에 답해주세요",
+      "required": true,
+      "title": "7.寝つきが悪く、十分な睡眠が取れない。",
+      "type": "SELECTABLE"
+    },
+    {
+      "answerType": "SINGULAR",
+      "answers": [
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "どちらともいえない ",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "type": "TERMINATION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "NONE",
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "どちらともいえない ",
+          "order": 3,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "いいえ",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "type": "TERMINATION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "NONE",
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "いいえ",
+          "order": 2,
+          "type": "TEXT"
+        },
+        {
+          "condition": {
+            "targetType": "ANSWER",
+            "conditionType": "EQUALS",
+            "value": "はい",
+            "type": "TEXT"
+          },
+          "decision": {
+            "action": {
+              "type": "TERMINATION"
+            },
+            "factorModifiers": [
+              {
+                "code": "score",
+                "operatorType": "ADDITION",
+                "value": 1,
+                "type": "DOUBLE"
+              }
+            ]
+          },
+          "displayText": "はい",
+          "order": 1,
+          "type": "TEXT"
+        }
+      ],
+      "description": "질문에 답해주세요",
+      "required": true,
+      "title": "8.寝ていても夜中に起きてしまうことがある。",
+      "type": "SELECTABLE"
+    }
+  ],
+  "data": {
+    "intro": [
+      {
+        "messages": [ "こんにちは! LINEヘルスケアです", "あなたの●●●の症状について\n\nいくつか教えてください。" ],
+        "buttons": [
+          {
+            "message": "症状をチェックする",
+            "buttonColor": "#1ed57a",
+            "textColor": "#ffffff"
+          }
+        ],
+        "images": [ ]
+      }
+    ]
+  },
+  "status": "PUBLISHED",
+  "title": "test question",
+  "version": 1
+}

@@ -1,0 +1,8 @@
+server:
+  tomcat:
+    max-keep-alive-requests: -1
+    keep-alive-timeout: 1m
+    connection-timeout: 2s
+    threads:
+      max: 256
+      min-spare: 256

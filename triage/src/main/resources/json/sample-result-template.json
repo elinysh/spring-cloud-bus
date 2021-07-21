@@ -1,0 +1,106 @@
+[
+  {
+    "resultCode": "重症",
+    "title": "중증",
+    "description": "화분증 중증",
+    "data": {
+      "title": "決定結果",
+      "messages": [ "花粉症の重症だと推定されます。" ],
+      "buttons": [
+        {
+          "message": "他の設問を遂行",
+          "buttonColor": "#1ed57a",
+          "textColor": "#ffffff"
+        },
+        {
+          "message": "病院相談必要",
+          "buttonColor": "#3b9cd8",
+          "textColor": "#ffffff"
+        },
+        {
+          "message": "Q&A",
+          "buttonColor": "#6487a5",
+          "textColor": "#ffffff"
+        }
+      ],
+      "images": [ ],
+      "descriptions": [ "花粉症にかかった時は、病院に行って詳しく診てもらわないといけません。" ]
+    }
+  },
+  {
+    "resultCode": "中等症",
+    "title": "중등증",
+    "description": "화분증 중등증",
+    "data": {
+      "title": "決定結果",
+      "messages": [ "花粉症の重症だと推定されます。中等症" ],
+      "buttons": [
+        {
+          "message": "他の設問を遂行",
+          "buttonColor": "#1ed57a",
+          "textColor": "#ffffff"
+        },
+        {
+          "message": "Q&A",
+          "buttonColor": "#6487a5",
+          "textColor": "#ffffff"
+        }
+      ],
+      "images": [ ],
+      "descriptions": [ "花粉症にかかった時は、病院に行って詳しく診てもらわないといけません。中等症" ]
+    }
+  },
+  {
+    "resultCode": "軽症",
+    "title": "경상",
+    "description": "화분증 경상",
+    "data": {
+      "title": "決定結果",
+      "messages": [ "花粉症の重症だと推定されます。軽症" ],
+      "buttons": [
+        {
+          "message": "他の設問を遂行",
+          "buttonColor": "#1ed57a",
+          "textColor": "#ffffff"
+        },
+        {
+          "message": "Q&A",
+          "buttonColor": "#6487a5",
+          "textColor": "#ffffff"
+        }
+      ],
+      "images": [ ],
+      "descriptions": [ "花粉症にかかった時は、病院に行って詳しく診てもらわないといけません。軽症" ]
+    }
+  },
+  {
+    "resultCode": "無症状",
+    "title": "決定結果",
+    "messages": [ "症状が全くありません。" ],
+    "buttons": [
+      {
+        "message": "他の設問を遂行",
+        "buttonColor": "#1ed57a",
+        "textColor": "#ffffff"
+      }
+    ],
+    "images": [ ],
+    "descriptions": [ "家でネットフリックスを見ても大丈夫です。" ]
+    "resultCode": "無症状",
+    "title": "증상없음",
+    "description": "증상없음",
+    "data": {
+      "title": "決定結果",
+      "messages": [ "症状が全くありません。" ],
+      "buttons": [
+        {
+          "message": "他の設問を遂行",
+          "buttonColor": "#1ed57a",
+          "textColor": "#ffffff"
+        }
+      ],
+      "images": [ ],
+      "descriptions": [ "家でネットフリックスを見ても大丈夫です。" ]
+    }
+  }
+]

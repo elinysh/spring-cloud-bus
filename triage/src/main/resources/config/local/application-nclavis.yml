@@ -1,0 +1,14 @@
+nclavis:
+  group:
+    healthcare-group:
+      auth:
+        domain: https://apis.nclavis.linecorp.com
+        resource-id: TPXg4GViZhlHpyhZPXYKBqE4vvE=
+        nclavis-access-token: "VC7Gu2m/LuZR1ogXlEFd7ZtfOz7PQQw7ah3XvKLkNNGw7S3OO59CGvi/CG9eBN2fDA3Em2I18x52Dse3ezfriCd30oxMdm0RhkMDhCkQvoEZBzVjc+NULiFDgGFXMT5Vj47ljVv8+Nz63yA/PYOO/Bd5Lp4a98PnjGprXrKs8OtQriYqhQcsfZukxLWroX1wvJJ/VGlxuN4eYleLerXoofjWF2I7PPj1pHfIb9PDcSkr/Scf9WSqDQnNcBoYmYXGkIQC48+kaye3Q+McYTLU2pd5kcSTF8rYN+oNAbLLklskTgb5WNgshIJICrcQaCMN5raeHKk1+6rJt8oFEpISzcEXmcd4bAqSdNE8IEcs+0eswdkjOj/ZWbXhLcKVlTFA"
+        nclavis-token-consumer-type: nclavis
+        auto-token-renew: true
+      text:
+        mongodb:
+          type: TEXT
+          inline-cipher-text: "1:R-J94IDC3cEdQyL-:f2__CZDJOP0jXKz5o0ETkqTY4r-JDdl0xgO7ZdWQDxZ56oOAAwSwrsktDAezFwXrYf4SVyi5hgnLadstubZouDJ8BQzcqxpWwo1rCRVdeaPx2jRghiahMxtFmF-YXmmh4rYmOExuAcZZBramHUwMb9UqZCh011sBtwr1D-I="
+

@@ -1,0 +1,46 @@
+{
+  "applicationId": "TEST",
+  "questionnaireConditionTable": {
+    "1": {
+      "RHEUMATISM_AGE": {
+        "targetType": "USER_PROFILE",
+        "conditionType": "EQUALS",
+        "type": "CODE",
+        "code": "RHEUMATISM_AGE",
+        "value": "FROM19TO24"
+      },
+      "GENDER": {
+        "targetType": "USER_PROFILE",
+        "type": "CODE",
+        "conditionType": "EQUALS",
+        "value": "FEMALE",
+        "code": "GENDER"
+      }
+    },
+    "2": {
+      "GENDER": {
+        "targetType": "USER_PROFILE",
+        "type": "CODE",
+        "conditionType": "EQUALS",
+        "value": "MALE",
+        "code": "GENDER"
+      }
+    },
+    "3": {
+      "RHEUMATISM_AGE": {
+        "targetType": "USER_PROFILE",
+        "conditionType": "NOT_EQUALS",
+        "type": "CODE",
+        "value": "FROM19TO24",
+        "code": "RHEUMATISM_AGE"
+      },
+      "GENDER": {
+        "targetType": "USER_PROFILE",
+        "type": "CODE",
+        "conditionType": "EQUALS",
+        "value": "FEMALE",
+        "code": "GENDER"
+      }
+    }
+  }
+}

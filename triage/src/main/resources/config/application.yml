@@ -1,0 +1,52 @@
+phase: local
+spring:
+  config:
+    import:
+      - classpath:config/local/application-logback.yml
+      - classpath:config/local/application-server.yml
+      - classpath:config/local/application-security.yml
+      - classpath:config/local/application-json.yml
+      - classpath:config/local/application-database.yml
+      - classpath:config/local/application-nclavis.yml
+
+---
+
+spring.config.activate.on-profile: beta
+phase: beta
+spring:
+  config:
+    import:
+      - classpath:config/beta/application-logback.yml
+      - classpath:config/beta/application-server.yml
+      - classpath:config/beta/application-security.yml
+      - classpath:config/beta/application-json.yml
+      - classpath:config/beta/application-database.yml
+      - classpath:config/local/application-nclavis.yml
+
+---
+
+spring.config.activate.on-profile: rc
+phase: rc
+spring:
+  config:
+    import:
+      - classpath:config/rc/application-logback.yml
+      - classpath:config/rc/application-server.yml
+      - classpath:config/rc/application-security.yml
+      - classpath:config/rc/application-json.yml
+      - classpath:config/rc/application-nclavis.yml
+      - classpath:config/rc/application-database.yml
+
+---
+
+spring.config.activate.on-profile: release
+phase: release
+spring:
+  config:
+    import:
+      - classpath:config/release/application-logback.yml
+      - classpath:config/release/application-server.yml
+      - classpath:config/release/application-security.yml
+      - classpath:config/release/application-json.yml
+      - classpath:config/rc/application-nclavis.yml
+      - classpath:config/rc/application-database.yml
