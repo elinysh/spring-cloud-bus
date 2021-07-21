@@ -1,0 +1,104 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.2'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'com.diffplug.eclipse.apt' version "3.26.0" apply false
+    id 'java-library'
+    id 'org.sonarqube' version "2.7"
+}
+
+group = 'com.linecorp.healthcare'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = JavaVersion.VERSION_11
+
+subprojects {
+    apply plugin: 'java-library'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'com.diffplug.eclipse.apt'
+
+    repositories {
+        mavenCentral()
+        maven { url "https://repo.linecorp.com/content/repositories/releases/" }
+        maven { url "https://repo.linecorp.com/content/repositories/snapshots/" }
+        maven { url "https://repo.navercorp.com/content/repositories/m2-snapshot-repository" }
+    }
+
+    dependencies {
+        api 'com.linecorp.healthcare:healthcare-exception'
+
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
+
+        testCompileOnly 'org.projectlombok:lombok'
+        testAnnotationProcessor 'org.projectlombok:lombok'
+
+        implementation 'org.mapstruct:mapstruct'
+        annotationProcessor 'org.mapstruct:mapstruct-processor'
+
+        testImplementation 'org.mapstruct:mapstruct'
+        testAnnotationProcessor 'org.mapstruct:mapstruct-processor'
+
+        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    }
+
+    ext {
+        commonsCollectionsVersion = '3.2.2'
+        commonsLangVersion = '3.12.0'
+        commonsPoolVersion = '2.10.0'
+        commonsTextVersion = '1.9'
+        guavaVersion = '30.1.1-jre'
+        jsr310Version = '2.11.3'
+        lineBotVersion = '4.3.0'
+        lhcStarterVersion = '0.0.1-SNAPSHOT'
+        mapStructVersion = '1.4.2.Final'
+        mysqlVersion = '8.0.15'
+        nclavisVersion = '3.2'
+        neloVersion = '1.6.7'
+        nimbusJoseJwtVersion = '5.7'
+        resilience4jVersion = '1.7.1'
+        swaggerVersion = '3.0.0'
+        iatGeneratorVersion = '1.0.6'
+    }
+
+    dependencyManagement {
+        dependencies {
+            dependency "commons-collections:commons-collections:$commonsCollectionsVersion"
+            dependency "org.apache.commons:commons-lang3:$commonsLangVersion"
+            dependency "org.apache.commons:commons-pool2:$commonsPoolVersion"
+            dependency "org.apache.commons:commons-text:$commonsTextVersion"
+            dependency "com.google.guava:guava:$guavaVersion"
+            dependency "com.linecorp.bot:line-bot-api-client:$lineBotVersion"
+            dependency "com.linecorp.bot:line-bot-model:$lineBotVersion"
+            dependency "com.linecorp.bot:line-bot-spring-boot:$lineBotVersion"
+            dependency "org.mapstruct:mapstruct:$mapStructVersion"
+            dependency "org.mapstruct:mapstruct-processor:$mapStructVersion"
+            dependency "mysql:mysql-connector-java:$mysqlVersion"
+            dependency "com.navercorp.nclavis:nclavis-client-spring-boot:$nclavisVersion"
+            dependency "com.naver.nelo2:nelo2-java-sdk-logback:$neloVersion"
+            dependency "com.nimbusds:nimbus-jose-jwt:$nimbusJoseJwtVersion"
+            dependency "io.github.resilience4j:resilience4j-circuitbreaker:$resilience4jVersion"
+            dependency "io.springfox:springfox-boot-starter:$swaggerVersion"
+
+            dependency "com.linecorp.healthcare:healthcare-exception:$lhcStarterVersion"
+            dependency "com.linecorp.healthcare:healthcare-rest-template-core:$lhcStarterVersion"
+            dependency "com.linecorp.healthcare:healthcare-web-client-core:$lhcStarterVersion"
+            dependency "com.linecorp.healthcare:healthcare-spring-boot-starter-cache-caffeine:$lhcStarterVersion"
+            dependency "com.linecorp.healthcare:healthcare-spring-boot-starter-cache-redis:$lhcStarterVersion"
+            dependency "com.linecorp.healthcare:healthcare-spring-boot-starter-encryption:$lhcStarterVersion"
+            dependency "com.linecorp.healthcare:healthcare-spring-boot-starter-encryption-jpa:$lhcStarterVersion"
+            dependency "com.linecorp.healthcare:healthcare-spring-boot-starter-encryption-kafka:$lhcStarterVersion"
+            dependency "com.linecorp.healthcare:healthcare-spring-boot-starter-pageable-jackson:$lhcStarterVersion"
+            dependency "com.linecorp.healthcare:healthcare-spring-boot-starter-pageable-reactive-support:$lhcStarterVersion"
+            dependency "com.linecorp.healthcare:healthcare-spring-boot-starter-web-l7check-reactive:$lhcStarterVersion"
+            dependency "com.linecorp.healthcare:healthcare-spring-boot-starter-web-l7check-servlet:$lhcStarterVersion"
+            dependency "com.linecorp.healthcare:healthcare-utils-jsonmap:$lhcStarterVersion"
+            dependency "com.linecorp.obs.commons:iat-generator:$iatGeneratorVersion"
+        }
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+}
+
+

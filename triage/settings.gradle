@@ -1,4 +1,5 @@
 rootProject.name = 'triage'
 
 include 'survey'
+include 'module:mapper'
 

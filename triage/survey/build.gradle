@@ -1,0 +1,14 @@
+dependencies {
+    implementation 'com.linecorp.healthcare:healthcare-spring-boot-starter-web-l7check-servlet'
+    implementation project(':module:mapper')
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'io.springfox:springfox-boot-starter'
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    api 'com.naver.nelo2:nelo2-java-sdk-logback'
+    implementation 'com.navercorp.nclavis:nclavis-client-spring-boot'
+}
+jar.enabled = false
